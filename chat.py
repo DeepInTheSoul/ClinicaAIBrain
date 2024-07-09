@@ -10,14 +10,14 @@ from langchain_community.llms import QianfanLLMEndpoint  # 从 langchain_communi
 config = dotenv_values(".env")
 
 # 设置 Qianfan 的 AK 和 SK 环境变量
-os.environ["QIANFAN_AK"] = "rYndCW8UyNrh7ZIxAmxG0w1X"
-os.environ["QIANFAN_SK"] = "KovKWoaJeKYeIQwLgOUxFof5KI1ggTRq"
+# os.environ["QIANFAN_AK"] = "rYndCW8UyNrh7ZIxAmxG0w1X"
+# os.environ["QIANFAN_SK"] = "KovKWoaJeKYeIQwLgOUxFof5KI1ggTRq"
 
 # 初始化不同的大模型接口
-ERNIE4_llm = QianfanLLMEndpoint(model="ERNIE-4.0-8K", streaming=False)
-Yi_llm = QianfanLLMEndpoint(model="Yi-34B-Chat", streaming=False)
-Llama_llm = QianfanLLMEndpoint(model="Meta-Llama-3-8B", streaming=False)
-ChatGLM_llm = QianfanLLMEndpoint(model="ChatGLM2-6B-32K", streaming=False)
+ERNIE4_llm = QianfanLLMEndpoint(model="ERNIE-4.0-8K", streaming=False,qianfan_ak='rYndCW8UyNrh7ZIxAmxG0w1X',qianfan_sk='KovKWoaJeKYeIQwLgOUxFof5KI1ggTRq')
+Yi_llm = QianfanLLMEndpoint(model="Yi-34B-Chat", streaming=False,qianfan_ak='rYndCW8UyNrh7ZIxAmxG0w1X',qianfan_sk='KovKWoaJeKYeIQwLgOUxFof5KI1ggTRq')
+Llama_llm = QianfanLLMEndpoint(model="Meta-Llama-3-8B", streaming=False,qianfan_ak='rYndCW8UyNrh7ZIxAmxG0w1X',qianfan_sk='KovKWoaJeKYeIQwLgOUxFof5KI1ggTRq')
+ChatGLM_llm = QianfanLLMEndpoint(model="ChatGLM2-6B-32K", streaming=False,qianfan_ak='rYndCW8UyNrh7ZIxAmxG0w1X',qianfan_sk='KovKWoaJeKYeIQwLgOUxFof5KI1ggTRq')
 
 # 定义聊天页面函数
 def chat_page():
