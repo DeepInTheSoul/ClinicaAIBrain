@@ -1,0 +1,11 @@
+streamlit
+python-dotenv
+streamlit_option_menu
+langchain_community
+langchain_openai
+langchain_core
+langchain_text_splitters
+chromadb
+pypdf
+unstructured
+python-pptx
