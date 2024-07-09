@@ -6,9 +6,10 @@ import os
 from langchain_community.embeddings import QianfanEmbeddingsEndpoint
 from langchain_community.vectorstores.chroma import Chroma
 
-os.environ["QIANFAN_AK"] = "rYndCW8UyNrh7ZIxAmxG0w1X"
-os.environ["QIANFAN_SK"] = "KovKWoaJeKYeIQwLgOUxFof5KI1ggTRq"
-embeddings=QianfanEmbeddingsEndpoint(model='bge-large-zh')
+# os.environ["QIANFAN_AK"] = "rYndCW8UyNrh7ZIxAmxG0w1X"
+# os.environ["QIANFAN_SK"] = "KovKWoaJeKYeIQwLgOUxFof5KI1ggTRq"
+# embeddings=QianfanEmbeddingsEndpoint(model='bge-large-zh')
+embeddings=QianfanEmbeddingsEndpoint(model='bge-large-zh',qianfan_ak='rYndCW8UyNrh7ZIxAmxG0w1X',qianfan_sk='KovKWoaJeKYeIQwLgOUxFof5KI1ggTRq')
 num = 0
 with codecs.open('./file/内科.csv') as f:
     new_json=[]
