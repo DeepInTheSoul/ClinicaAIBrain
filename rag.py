@@ -16,9 +16,9 @@ import csv
 config = dotenv_values(".env")
 
 
-QIANFAN_AK = os.getenv("QIANFAN_AK")  # 确保使用 get 方法获取环境变量
-QIANFAN_SK = os.getenv("QIANFAN_SK")
-embeddings = QianfanEmbeddingsEndpoint(model='bge-large-zh', qianfan_ak=QIANFAN_AK, qianfan_sk=QIANFAN_SK)
+os.environ["QIANFAN_AK"] = "rYndCW8UyNrh7ZIxAmxG0w1X"
+os.environ["QIANFAN_SK"] = "KovKWoaJeKYeIQwLgOUxFof5KI1ggTRq"
+embeddings=QianfanEmbeddingsEndpoint(model='bge-large-zh')
 
 def rag_page():
     st.title("📚知识库管理")
