@@ -16,9 +16,9 @@ import csv
 config = dotenv_values(".env")
 
 
-os.environ["QIANFAN_AK"] = "rYndCW8UyNrh7ZIxAmxG0w1X"
-os.environ["QIANFAN_SK"] = "KovKWoaJeKYeIQwLgOUxFof5KI1ggTRq"
-embeddings=QianfanEmbeddingsEndpoint(model='bge-large-zh')
+QIANFAN_AK = "rYndCW8UyNrh7ZIxAmxG0w1X"
+QIANFAN_SK = "KovKWoaJeKYeIQwLgOUxFof5KI1ggTRq"
+embeddings = QianfanEmbeddingsEndpoint(model='bge-large-zh', qianfan_ak=QIANFAN_AK, qianfan_sk=QIANFAN_SK)
 
 def rag_page():
     st.title("📚知识库管理")
