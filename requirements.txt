@@ -9,3 +9,4 @@ chromadb
 pypdf
 unstructured
 python-pptx
+qianfan
