@@ -10,8 +10,8 @@ from langchain_community.llms import QianfanLLMEndpoint  # 从 langchain_communi
 config = dotenv_values(".env")
 
 # 设置 Qianfan 的 AK 和 SK 环境变量
-os.environ["QIANFAN_AK"] = "rYndCW8UyNrh7ZIxAmxG0w1X"
-os.environ["QIANFAN_SK"] = "KovKWoaJeKYeIQwLgOUxFof5KI1ggTRq"
+os.environ["QIANFAN_AK"] = "G5NhjZhLEdw53lVZKeQM3eaD"
+os.environ["QIANFAN_SK"] = "Hxkgkd6iee9FMLVucKnTUNg59jw3JDWK"
 
 # 初始化不同的大模型接口
 ERNIE4_llm = QianfanLLMEndpoint(model="ERNIE-4.0-8K", streaming=False)
