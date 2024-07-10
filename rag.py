@@ -17,15 +17,12 @@ config = dotenv_values(".env")
 
 os.environ["QIANFAN_AK"] = "rYndCW8UyNrh7ZIxAmxG0w1X"
 os.environ["QIANFAN_SK"] = "KovKWoaJeKYeIQwLgOUxFof5KI1ggTRq"
-# 从环境变量获取并转换为字符串
-qianfan_ak_str = os.environ.get('QIANFAN_AK', '')  # 第二个参数是默认值，如果环境变量不存在
-qianfan_sk_str = os.environ.get('QIANFAN_SK', '')
 
-# 打印出来确认一下
-print(f"Qianfan AK: {qianfan_ak_str}")
-print(f"Qianfan SK: {qianfan_sk_str}")
-
-embeddings=QianfanEmbeddingsEndpoint(model='bge-large-zh',qianfan_ak=str(qianfan_ak_str), qianfan_sk=str(qianfan_sk_str))
+embeddings = QianfanEmbeddingsEndpoint(
+    model='bge-large-zh',
+    qianfan_ak=os.environ["QIANFAN_AK"],
+    qianfan_sk=os.environ["QIANFAN_SK"]
+)
 
 def rag_page():
     st.title("📚知识库管理")
