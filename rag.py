@@ -25,7 +25,7 @@ qianfan_sk_str = os.environ.get('QIANFAN_SK', '')
 print(f"Qianfan AK: {qianfan_ak_str}")
 print(f"Qianfan SK: {qianfan_sk_str}")
 
-embeddings=QianfanEmbeddingsEndpoint(model='bge-large-zh')
+embeddings=QianfanEmbeddingsEndpoint(model='bge-large-zh',qianfan_ak=str(qianfan_ak), qianfan_sk=str(qianfan_sk))
 
 def rag_page():
     st.title("📚知识库管理")
