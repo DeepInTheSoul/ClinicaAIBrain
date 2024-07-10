@@ -15,7 +15,10 @@ import codecs
 import csv
 config = dotenv_values(".env")
 
-embeddings=QianfanEmbeddingsEndpoint(model='bge-large-zh',qianfan_ak='rYndCW8UyNrh7ZIxAmxG0w1X',qianfan_sk='KovKWoaJeKYeIQwLgOUxFof5KI1ggTRq')
+os.environ["QIANFAN_AK"] = "rYndCW8UyNrh7ZIxAmxG0w1X"
+os.environ["QIANFAN_SK"] = "KovKWoaJeKYeIQwLgOUxFof5KI1ggTRq"
+# embeddings=QianfanEmbeddingsEndpoint(model='bge-large-zh')
+embeddings=QianfanEmbeddingsEndpoint(model='bge-large-zh')
 
 def rag_page():
     st.title("📚知识库管理")
