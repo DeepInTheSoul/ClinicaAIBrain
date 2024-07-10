@@ -1,4 +1,5 @@
 streamlit
+pydantic==2.8.0
 python-dotenv
 streamlit_option_menu
 langchain_community
