@@ -8,6 +8,7 @@ langchain-openai==0.1.14
 langchain-text-splitters==0.2.2
 langdetect==1.0.9
 langsmith==0.1.83
+protobuf==4.25.3
 chromadb
 pypdf
 unstructured
